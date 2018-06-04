@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FinalController">
+   <children>
+      <Canvas height="400.0" layoutY="-2.0" width="600.0" />
+      <ImageView fitHeight="426.0" fitWidth="619.0" opacity="0.81" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@marbles2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="159.0" layoutY="14.0" prefHeight="91.0" prefWidth="325.0" text="MANCALA">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#f21a1a" />
+                  <Stop color="#392929" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="62.0" />
+         </font>
+      </Label>
+      <Button id="Single" fx:id="Single" layoutX="208.0" layoutY="277.0" mnemonicParsing="false" onAction="#handleSingleButtonAction" onMouseClicked="#handleSingleButtonAction" opacity="0.91" prefHeight="69.0" prefWidth="182.0" text="Play" textFill="#940c1e">
+         <font>
+            <Font name="Andale Mono" size="46.0" />
+         </font>
+      </Button>
+      <Button id="help" fx:id="help" layoutX="557.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleHelpButtonAction" onMouseClicked="#handleHelpButtonAction" prefHeight="27.0" prefWidth="33.0" text="?" />
+   </children>
+</AnchorPane>

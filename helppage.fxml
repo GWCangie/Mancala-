@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HelppageController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0" />
+      <ImageView fitHeight="400.0" fitWidth="607.0" layoutX="-7.0" pickOnBounds="true">
+         <image>
+            <Image url="@Mancala_Instructions-1.png" />
+         </image>
+      </ImageView>
+      <Button id="mainmenu" layoutX="492.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleMainMenuButtonAction" onMouseClicked="#handleMainMenuButtonAction" prefHeight="32.0" prefWidth="96.0" text="Main Menu">
+         <font>
+            <Font name="Andale Mono" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow color="#267aab" />
+         </effect>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#b22828" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+   </children>
+</AnchorPane>

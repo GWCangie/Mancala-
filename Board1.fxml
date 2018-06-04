@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="hey" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Board1Controller">
+   <children>
+      <Pane fx:id="boardpane" onMouseEntered="#setCurrentPlayerLabel" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Ellipse layoutX="52.0" layoutY="168.0" radiusX="48.0" radiusY="108.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff345d" />
+                        <Stop color="#1f81ff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Ellipse>
+            <Ellipse id="Mancala1" fx:id="Mancala1" layoutX="546.0" layoutY="168.0" radiusX="48.0" radiusY="108.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff345d" />
+                        <Stop color="#1fa7ff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Ellipse>
+            <Button layoutX="563.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleExitButtonAction" onMouseClicked="#handleExitButtonAction" prefHeight="27.0" prefWidth="31.0" text="X" />
+            <Button layoutX="143.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleMainMenuButtonAction" onMouseClicked="#handleMainMenuButtonAction" opacity="0.73" prefHeight="41.0" prefWidth="114.0" text="Main Menu">
+               <font>
+                  <Font name="Andale Mono" size="13.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#2ebaf2de" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Pane fx:id="slotspane" layoutX="100.0" layoutY="47.0" prefHeight="216.0" prefWidth="388.0">
+               <children>
+                  <Circle fx:id="slot6" layoutX="44.0" layoutY="69.0" onDragEntered="#slot6hover" onMouseClicked="#slot6Click" onMouseDragEntered="#slot6hover" onMouseDragExited="#slotrevert" onMouseEntered="#slot6hover" onMouseExited="#slot6revert" radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#2ebaf2de" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="slot5" layoutX="106.0" layoutY="69.0" onMouseClicked="#slot5Click" onMouseDragEntered="#slot5hover" onMouseDragExited="#slotrevert" onMouseEntered="#slot5hover" onMouseExited="#slot5revert" radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#2ebaf2de" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="slot8" layoutX="106.0" layoutY="168.0" onMouseClicked="#slot8Click" onMouseEntered="#slot8hover" onMouseExited="#slot8revert" radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#2ebaf2de" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="slot7" layoutX="44.0" layoutY="168.0" onMouseClicked="#slot7Click" onMouseEntered="#slot7hover" onMouseExited="#slot7revert" radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#2ebaf2de" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="slot9" layoutX="167.0" layoutY="168.0" onMouseClicked="#slot9Click" onMouseEntered="#slot9hover" onMouseExited="#slot9revert" radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#2ebaf2de" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="slot10" layoutX="230.0" layoutY="168.0" onMouseClicked="#slot10Click" onMouseEntered="#slot10hover" onMouseExited="#slot10revert" radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#2ebaf2de" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="slot11" layoutX="292.0" layoutY="168.0" onMouseClicked="#slot11Click" onMouseEntered="#slot11hover" onMouseExited="#slot11revert" radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#2ebaf2de" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="slot12" layoutX="355.0" layoutY="168.0" onMouseClicked="#slot12Click" onMouseEntered="#slot12hover" onMouseExited="#slot12revert" radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#2ebaf2de" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="slot4" layoutX="167.0" layoutY="69.0" onMouseClicked="#slot4Click" onMouseDragEntered="#slot4hover" onMouseDragExited="#slotrevert" onMouseEntered="#slot4hover" onMouseExited="#slot4revert" radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#2ebaf2de" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="slot3" layoutX="230.0" layoutY="69.0" onMouseClicked="#slot3Click" onMouseDragEntered="#slot3hover" onMouseDragExited="#slotrevert" onMouseEntered="#slot3hover" onMouseExited="#slot3revert" radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#2ebaf2de" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="slot2" layoutX="292.0" layoutY="69.0" onMouseClicked="#slot2Click" onMouseEntered="#slot2hover" onMouseExited="#slot2revert" radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#2ebaf2de" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle id="slot1" fx:id="slot1" layoutX="355.0" layoutY="69.0" onMouseClicked="#slot1Click" onMouseEntered="#slot1hover" onMouseExited="#slotrevert" radius="30.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#1fb2ff" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Label id="lab" fx:id="label6" alignment="CENTER" layoutX="27.0" layoutY="56.0" prefHeight="27.0" prefWidth="31.0" text="4">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Label fx:id="label5" alignment="CENTER" layoutX="89.0" layoutY="56.0" prefHeight="27.0" prefWidth="31.0" text="4">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Label fx:id="label4" alignment="CENTER" layoutX="150.0" layoutY="56.0" prefHeight="27.0" prefWidth="31.0" text="4">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Label fx:id="label3" alignment="CENTER" layoutX="215.0" layoutY="58.0" prefHeight="17.0" prefWidth="31.0" text="4">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Label fx:id="label2" alignment="CENTER" layoutX="275.0" layoutY="56.0" prefHeight="27.0" prefWidth="31.0" text="4">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font></Label>
+                  <Label fx:id="label1" alignment="CENTER" layoutX="338.0" layoutY="56.0" prefHeight="27.0" prefWidth="33.0" text="4">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font></Label>
+                  <Label fx:id="label7" alignment="CENTER" layoutX="27.0" layoutY="155.0" prefHeight="27.0" prefWidth="31.0" text="4">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Label fx:id="label8" alignment="CENTER" layoutX="89.0" layoutY="160.0" prefHeight="17.0" prefWidth="31.0" text="4">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font></Label>
+                  <Label fx:id="label9" alignment="CENTER" layoutX="150.0" layoutY="155.0" prefHeight="27.0" prefWidth="31.0" text="4">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Label fx:id="label10" alignment="CENTER" layoutX="213.0" layoutY="155.0" prefHeight="27.0" prefWidth="31.0" text="4">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Label fx:id="label11" alignment="CENTER" layoutX="275.0" layoutY="160.0" prefHeight="17.0" prefWidth="31.0" text="4">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font></Label>
+                  <Label fx:id="label12" alignment="CENTER" layoutX="338.0" layoutY="160.0" prefHeight="17.0" prefWidth="31.0" text="4">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+            <Label fx:id="mancala2" alignment="CENTER" layoutX="27.0" layoutY="160.0" prefHeight="27.0" prefWidth="48.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="mancala1" alignment="CENTER" layoutX="516.0" layoutY="160.0" prefHeight="27.0" prefWidth="60.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="turn" alignment="CENTER" layoutX="100.0" layoutY="15.0" prefHeight="41.0" prefWidth="200.0" text="Turn">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#8b85f8" />
+                        <Stop color="#470865" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font name="Andale Mono" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentplayerlabel" layoutX="311.0" layoutY="5.0" prefHeight="60.0" prefWidth="128.0" text="Current">
+               <font>
+                  <Font name="Andale Mono" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#bf307c" />
+                        <Stop color="#3942ed" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+            <Label fx:id="over" layoutX="89.0" layoutY="263.0" opacity="0.0" prefHeight="52.0" prefWidth="405.0" text="GAME OVER">
+               <font>
+                  <Font size="62.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#220101" />
+                        <Stop color="#1a27ddf7" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Button fx:id="newgame" layoutX="300.0" layoutY="345.0" mnemonicParsing="false" onMouseClicked="#newgameHandleButtonAction" opacity="0.73" prefHeight="41.0" prefWidth="114.0" text="New Game">
+               <font>
+                  <Font name="Andale Mono" size="13.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#149296" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
